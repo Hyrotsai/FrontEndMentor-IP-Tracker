@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <script defer src="script.js"></script>
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+
+</head>
+
+<body>
+
+  <section class='header__container'>
+    <h1 class='header__tittle'>IP Address Tracker</h1>
+
+    <div class="input-container">
+      <input class='search__input' placeholder='Search for any IP address or domain' id='search__input'>
+      <button type="button" class="search__button" id='search__button'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+          <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+        </svg>
+      </button>
+    </div>
+
+
+    <div class='card__stats'>
+      <div class='description__stats'>
+        <p class='stats__tittle'>IP ADDRESS</p>
+        <p class='stats__description' id='ip__description'></p>
+      </div>
+      <div class='description__stats separator'>
+        <p class='stats__tittle'>LOCATION</p>
+        <p class='stats__description' id='location__description'></p>
+      </div>
+      <div class='description__stats separator'>
+        <p class='stats__tittle'>TIMEZONE</p>
+        <p class='stats__description' id='utc__descripcion'></p>
+      </div>
+      <div class='description__stats separator'>
+        <p class='stats__tittle'>ISP</p>
+        <p class='stats__description' id='isp__description'></p>
+      </div>
+    </div>
+  </section>
+
+  <section class='map__container'>
+    <div id="map"></div>
+  </section>
+
+
+</body>
+
+</html>

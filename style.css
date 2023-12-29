@@ -1,0 +1,148 @@
+:root {
+  --VeryDarkGray: hsl(0, 0%, 17%);
+  --Darkgray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  overscroll-behavior-y: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  height: 100vh;
+}
+
+/* MAP */
+#map {
+  height: 100%;
+  background-color: #aaa;
+}
+
+.header__container {
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./images/pattern-bg-desktop.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__tittle {
+  color: white;
+  padding-top: 5rem;
+}
+
+.search__input {
+  width: 25%;
+  min-width: 250px;
+  border-radius: 1rem 0 0 1rem;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin: auto;
+}
+
+.search__button {
+  padding: 1.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+}
+
+.card__stats {
+  background-color: white;
+  height: 13rem;
+  width: 70%;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2000;
+  top: 20%;
+}
+
+.description__stats {
+  width: 25%;
+  height: 4rem;
+  padding: 0 1rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.stats__tittle {
+  color: var(--Darkgray);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.stats__description {
+  color: var(--VeryDarkGray);
+  font-weight: bold;
+  margin-bottom: 0;
+  justify-self: flex-end;
+  margin-top: auto;
+}
+
+.separator {
+  border-left: 1px solid var(--Darkgray);
+}
+
+.map__container {
+  height: 65vh;
+}
+
+@media (width < 700px) {
+  .input-container {
+    margin-top: 3rem;
+  }
+
+  .search__input {
+    width: 80%;
+  }
+
+  .card__stats {
+    top: 1.5rem;
+  }
+
+  .card__stats {
+    flex-direction: column;
+    width: 90%;
+    height: 35rem;
+  }
+
+  .description__stats {
+    width: 100%;
+    text-align: center;
+  }
+
+  .separator {
+    border: none;
+  }
+}
